@@ -1,0 +1,13 @@
+@use '../settings/colors';
+
+.projects {
+  padding: 4rem 0;
+  background-color: colors.$color-background;
+  color: colors.$color-text;
+  text-align: center;
+
+  .projects__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
