@@ -20,19 +20,4 @@
     font-weight: bold;
   }
   
-  .nav__list {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-  
-    a {
-      text-decoration: none;
-      color: colors.$color-text;
-      font-weight: 500;
-  
-      &:hover {
-        color: colors.$color-primary;
-      }
-    }
-  }
   
