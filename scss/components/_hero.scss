@@ -1,0 +1,19 @@
+@use '../settings/colors';
+
+.hero {
+  padding: 6rem 0;
+  background-color: colors.$color-background;
+  text-align: center;
+
+  .hero__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: colors.$color-text;
+  }
+
+  .hero__subtitle {
+    font-size: 1.375rem;
+    color: colors.$color-text;
+    margin-bottom: 2rem;
+  }
+}

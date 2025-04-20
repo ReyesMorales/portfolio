@@ -4,6 +4,12 @@ body {
     background-color: colors.$color-background;
     color: colors.$color-text;
   }
+
+  html {
+    font-size: 18px; 
+    scroll-behavior: smooth;
+  }
+  
   
   section {
     padding: 4rem 0;
