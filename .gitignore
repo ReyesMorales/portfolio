@@ -1,0 +1,13 @@
+# node modules
+node_modules/
+
+# CSS compilado
+css/*.css
+css/*.css.map
+
+# Archivos temporales
+.DS_Store
+*.log
+
+# VSCode
+.vscode/
