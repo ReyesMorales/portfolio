@@ -1,5 +1,34 @@
-.skills__list {
-    list-style-position: inside;
+@use '../settings/colors';
+
+.skills {
+  padding: 4rem 0;
+  background-color: colors.$color-background;
+  color: colors.$color-text;
+  text-align: center;
+
+  .skills__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .skills__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
     padding-left: 0;
   }
+
+  .skills__list li {
+    font-size: 1.375rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.75rem;
+    font-weight: 500;
+  }
+}
+
   
