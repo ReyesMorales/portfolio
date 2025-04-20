@@ -1,0 +1,153 @@
+/* 1. Reset / base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  
+  /* 2. Header */
+  .header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav__list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+  
+  .nav__list a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .nav__list a:hover {
+    color: #0077ff;
+  }
+  
+  /* 3. Menú responsive */
+  .nav__toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .nav__list {
+      display: none;
+      flex-direction: column;
+      background: #fff;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav__list.active {
+      display: flex;
+    }
+  
+    .nav__toggle {
+      display: block;
+    }
+  }
+  
+  /* 4. Secciones */
+  section {
+    padding: 4rem 0;
+  }
+  
+  section h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  .skills__list {
+    list-style-position: inside;
+    padding-left: 0;
+  }
+  
+  /* 5. Botón */
+  .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #0077ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #005fd1;
+  }
+  
+  /* 6. Footer */
+  .footer {
+    text-align: center;
+    padding: 2rem;
+    background: #eee;
+    color: #555;
+    font-size: 0.9rem;
+  }
+
+  .copy-btn {
+    margin-left: 0.5rem;
+    padding: 0.2rem 0.4rem;
+    font-size: 1rem;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .copy-btn:hover {
+    background: #eee;
+  }
+  
+  .copiado-msg {
+    margin-left: 0.5rem;
+    color: green;
+    font-size: 0.9rem;
+  }
+  
