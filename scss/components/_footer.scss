@@ -1,0 +1,30 @@
+@use '../settings/colors';
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background: colors.$color-footer-bg;
+    color: colors.$color-footer-text;
+    font-size: 0.9rem;
+  }
+  
+  .copy-btn {
+    margin-left: 0.5rem;
+    padding: 0.2rem 0.4rem;
+    font-size: 1rem;
+    background: transparent;
+    border: 1px solid colors.$color-copy-border;
+    border-radius: 4px;
+    cursor: pointer;
+  
+    &:hover {
+      background: colors.$color-footer-bg;
+    }
+  }
+  
+  .copiado-msg {
+    margin-left: 0.5rem;
+    color: colors.$color-copy-msg;
+    font-size: 0.9rem;
+  }
+  

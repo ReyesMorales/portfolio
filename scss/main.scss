@@ -2,4 +2,9 @@
 @use 'generic/reset';
 @use 'elements/base';
 @use 'objects/container';
+@use 'components/header';
+@use 'components/nav';
+@use 'components/button';
+@use 'components/footer';
+@use 'components/skills';
 @use 'utilities/spacings';

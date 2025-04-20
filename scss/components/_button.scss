@@ -1,0 +1,18 @@
+@use '../settings/colors';
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: colors.$color-primary;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  
+    &:hover {
+      background: colors.$color-primary-hover;
+    }
+  }
+  
