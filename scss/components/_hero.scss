@@ -1,20 +1,40 @@
 @use '../settings/colors';
-@use '../utilities/spacings';
 
 .hero {
-  @include spacings.section-spacing();
   background-color: colors.$color-background;
   text-align: center;
+  font-family: 'Fira Code', monospace;
+  padding-block: 4rem;
 
-  .hero__title {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+  .hero__line {
+    font-size: 2rem;
     color: colors.$color-text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
   }
 
-  .hero__subtitle {
-    font-size: 1.375rem;
+  .hero__prompt {
+    color: colors.$color-primary;
+  }
+
+  .hero__cursor {
     color: colors.$color-text;
-    margin-bottom: 2rem;
+    animation: blink 1s steps(2, start) infinite;
+  }
+
+  .hero__subtext {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: colors.$color-text;
+    font-family: 'Inter', sans-serif;
+  }
+
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
   }
 }
