@@ -4,18 +4,53 @@
 .about {
   @include spacings.section-spacing();
   background-color: colors.$color-background;
-  color: colors.$color-text;
-  text-align: center;
 
   .about__title {
+    text-align: center;
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    color: colors.$color-text;
   }
 
-  .about__description {
-    font-size: 1.375rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
+  .about__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
   }
+
+  .about__text {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: colors.$color-text;
+
+    p + p {
+      margin-top: 1rem;
+    }
+  }
+
+  .about__image {
+    flex: 1;
+    text-align: center;
+  
+    img {
+      width: 100%;
+      max-width: 370px;
+      height: auto;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease;
+  
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }  
 }
+
