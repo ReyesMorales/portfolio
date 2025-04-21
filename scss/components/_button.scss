@@ -1,4 +1,3 @@
-// src/scss/components/_button.scss
 @use '../settings/colors';
 
 .btn {
@@ -25,6 +24,11 @@
     outline-offset: 2px;
   }
 
+  &--small {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
   &--icon {
     padding: 0.4rem 0.6rem;
     font-size: 1rem;
@@ -37,5 +41,3 @@
     }
   }
 }
-
-  

@@ -66,65 +66,93 @@
     <h2 class="projects__title">Proyectos</h2>
     <div class="projects__grid">
 
-      <!-- Card GatoHaus -->
-      <article class="project-card">
-        <img
-          src="assets/images/gatohaus-card.png"
-          alt="Vista previa de GatoHaus"
-          class="project-card__image"
-        />
-        <div class="project-card__content">
-          <h3 class="project-card__title">GatoHaus</h3>
-          <p class="project-card__description">
-            Simulador de reservas para un hotel de gatos. Incluye frontend con HTML, CSS y JavaScript, y backend con Node.js y Express.
-          </p>
-          <a
-            href="https://github.com/ReyesMorales/GatoHaus"
-            class="btn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ver repositorio
-          </a>
-        </div>
-      </article>
+     <!-- Card GatoHaus -->
+<article class="project-card project-card--horizontal">
+  <img
+    src="assets/images/gatohaus-card.png"
+    alt="Vista previa de GatoHaus"
+    class="project-card__image"
+  />
+  <div class="project-card__content">
+    <h3 class="project-card__title">GatoHaus</h3>
 
-      <!-- Card OrdenadoresDeBuceo -->
-      <article class="project-card">
-        <img
-          src="assets/images/ordenadoresDeBuceo-card.png"
-          alt="Vista previa de OrdenadoresDeBuceo"
-          class="project-card__image"
-        />
-        <div class="project-card__content">
-          <h3 class="project-card__title">OrdenadoresDeBuceo</h3>
-          <p class="project-card__description">
-            Proyecto en desarrollo para un cliente. Permite comparar ordenadores de buceo por características como seguridad, profundidad y tecnología. Maquetado con React, TypeScript y Tailwind CSS. Repositorio privado.
-          </p>
-        </div>
-      </article>
-      <!-- Card HelpHub -->
-      <article class="project-card">
-        <img
-          src="assets/images/helphub.png"
-          alt="Vista previa de HelpHub"
-          class="project-card__image"
-        />
-        <div class="project-card__content">
-          <h3 class="project-card__title">HelpHub</h3>
-          <p class="project-card__description">
-            Proyecto voluntario en el que participé en el rol de front, usando Vite, React, TypeScript y Tailwind CSS. Desarrollamos una página de intercambio de habilidades.
-          </p>
-          <a
-            href="https://www.linkedin.com/posts/evangelina-segovia-ux-ui_y-al-fin-est%C3%A1-listo-despu%C3%A9s-de-7-ugcPost-7272883323952156673-zPwk?utm_source=share&utm_medium=member_desktop&rcm=ACoAACzGw50BUrvoLnhTwale2eMLW5-qMRVnAYI"
-            class="btn project-card__link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ver en LinkedIn
-          </a>
-        </div>
-      </article>
+    <div class="project-card__badges">
+      <span class="tag tag--html">HTML</span>
+      <span class="tag tag--css">CSS</span>
+      <span class="tag tag--javascript">JS</span>
+      <span class="tag tag--node">Node.js</span>
+      <span class="tag tag--express">Express</span>
+    </div>
+
+    <p class="project-card__description">
+      Simulador de reservas para un hotel de gatos. Incluye frontend con HTML, CSS y JavaScript, y backend con Node.js y Express.
+    </p>
+
+    <a
+      href="https://github.com/ReyesMorales/GatoHaus"
+      class="btn btn--small project-card__btn"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Ver repositorio
+    </a>
+  </div>
+</article>
+
+<!-- Card OrdenadoresDeBuceo -->
+<article class="project-card project-card--horizontal">
+  <img
+    src="assets/images/ordenadoresDeBuceo-card.png"
+    alt="Vista previa de OrdenadoresDeBuceo"
+    class="project-card__image"
+  />
+  <div class="project-card__content">
+    <h3 class="project-card__title">OrdenadoresDeBuceo</h3>
+
+    <div class="project-card__badges">
+      <span class="tag tag--react">React</span>
+      <span class="tag tag--typescript">TypeScript</span>
+      <span class="tag tag--tailwind">Tailwind</span>
+    </div>
+
+    <p class="project-card__description">
+      Proyecto en desarrollo para un cliente. Permite comparar ordenadores de buceo por características como seguridad, profundidad y tecnología. Repositorio privado.
+    </p>
+  </div>
+</article>
+
+<!-- Card HelpHub -->
+<article class="project-card project-card--horizontal">
+  <img
+    src="assets/images/helphub.png"
+    alt="Vista previa de HelpHub"
+    class="project-card__image"
+  />
+  <div class="project-card__content">
+    <h3 class="project-card__title">HelpHub</h3>
+
+    <div class="project-card__badges">
+      <span class="tag tag--vite">Vite</span>
+      <span class="tag tag--react">React</span>
+      <span class="tag tag--typescript">TypeScript</span>
+      <span class="tag tag--tailwind">Tailwind</span>
+    </div>
+
+    <p class="project-card__description">
+      Proyecto voluntario donde participé como desarrolladora frontend.
+    </p>
+
+    <a
+      href="https://www.linkedin.com/posts/evangelina-segovia-ux-ui_y-al-fin-est%C3%A1-listo-despu%C3%A9s-de-7-ugcPost-7272883323952156673-zPwk?utm_source=share&utm_medium=member_desktop"
+      class="btn btn--small project-card__btn"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Ver en LinkedIn
+    </a>
+  </div>
+</article>
+
     </div>
   </div>
 </section>
