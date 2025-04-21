@@ -1,8 +1,7 @@
 @use '../settings/colors';
 
-
 .header {
-    background: #fff;
+    background-color: colors.$color-footer-bg;
     border-bottom: 1px solid colors.$color-border;
     position: sticky;
     top: 0;
@@ -16,8 +15,31 @@
   }
   
   .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.4rem;
+    font-weight: 400;
+    position: relative;
+    display: inline-block;
+    color: colors.$color-primary;
+  
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: colors.$color-primary;
+      bottom: -6px;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease-in-out;
+    }
+  
+    &:hover::after {
+      transform: scaleX(1);
+    }
   }
+  
+  
   
   
