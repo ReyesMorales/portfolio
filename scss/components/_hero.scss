@@ -1,10 +1,11 @@
 @use '../settings/colors';
+@use '../utilities/spacings';
 
 .hero {
+  @include spacings.section-spacing(1rem); 
   background-color: colors.$color-background;
   text-align: center;
   font-family: 'Fira Code', monospace;
-  padding-block: 4rem;
 
   .hero__line {
     font-size: 2rem;
