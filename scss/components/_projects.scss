@@ -35,8 +35,10 @@
   &__image {
     width: 100%;
     height: 300px;
-    object-fit: cover;
-  }
+    object-fit: contain;
+    background-color: colors.$color-copy-border; 
+    padding: 1rem;
+  }  
 
   &__content {
     padding: 1.5rem;
