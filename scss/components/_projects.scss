@@ -1,7 +1,8 @@
 @use '../settings/colors';
+@use '../utilities/spacings';
 
 .projects {
-  padding: 4rem 0;
+  @include spacings.section-spacing();
   text-align: center;
 
   &__title {

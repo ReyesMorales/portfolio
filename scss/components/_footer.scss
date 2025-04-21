@@ -1,10 +1,11 @@
 @use '../settings/colors';
+@use '../utilities/spacings';
 
 .footer {
+  @include spacings.section-spacing();
   background-color: colors.$color-footer-bg;
   color: colors.$color-footer-text;
   text-align: center;
-  padding: 2.5rem 1rem;
   border-top: 1px solid colors.$color-border;
 
   p {

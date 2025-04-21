@@ -1,0 +1,5 @@
+// Mixin reutilizable para espaciado de secciones
+@mixin section-spacing($padding: 1rem) {
+    padding-block: $padding;
+  }
+  

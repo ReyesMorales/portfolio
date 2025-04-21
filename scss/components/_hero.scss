@@ -1,7 +1,8 @@
 @use '../settings/colors';
+@use '../utilities/spacings';
 
 .hero {
-  padding: 6rem 0;
+  @include spacings.section-spacing();
   background-color: colors.$color-background;
   text-align: center;
 

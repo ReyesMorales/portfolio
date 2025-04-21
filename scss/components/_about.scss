@@ -1,7 +1,8 @@
 @use '../settings/colors';
+@use '../utilities/spacings';
 
 .about {
-  padding: 4rem 0;
+  @include spacings.section-spacing();
   background-color: colors.$color-background;
   color: colors.$color-text;
   text-align: center;
