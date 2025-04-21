@@ -1,18 +1,18 @@
 @use '../settings/colors';
-@use '../utilities/spacings';
 
 .footer {
-  @include spacings.section-spacing();
   background-color: colors.$color-footer-bg;
   color: colors.$color-footer-text;
   text-align: center;
+  padding-block: 0;
+  margin-top: 0;
   border-top: 1px solid colors.$color-border;
 
   p {
-    margin: 0;
+    margin: 0.5rem;
     font-weight: 500;
-    font-size: 1.25rem; // más grande
-    letter-spacing: 0.5px; // más estilizado
+    font-size: 1.25rem; 
+    letter-spacing: 0.5px; 
   }
 
   span {
@@ -22,3 +22,23 @@
     color: #666;
   }
 }
+
+.footer__social {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+
+  .footer__icon {
+    margin-bottom: 1rem;
+    margin-top: 0.2rem;
+    font-size: 2rem;
+    color: colors.$color-text;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: colors.$color-primary;
+    }
+  }
+}
+
