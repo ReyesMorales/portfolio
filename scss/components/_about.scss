@@ -27,7 +27,7 @@
   .about__text {
     flex: 1;
     font-size: 1.1rem;
-    line-height: 1.6;
+    line-height: 1.8;
     color: colors.$color-text;
 
     p + p {
@@ -41,7 +41,7 @@
   
     img {
       width: 100%;
-      max-width: 370px;
+      max-width: 390px;
       height: auto;
       border-radius: 1rem;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
