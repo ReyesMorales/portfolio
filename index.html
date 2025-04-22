@@ -61,102 +61,82 @@
   
 
   <!-- Projects -->
-<section id="proyectos" class="projects">
-  <div class="container">
-    <h2 class="projects__title">Proyectos</h2>
-    <div class="projects__grid">
-
-     <!-- Card GatoHaus -->
-<article class="project-card project-card--horizontal">
-  <img
-    src="assets/images/gatohaus-card.png"
-    alt="Vista previa de GatoHaus"
-    class="project-card__image"
-  />
-  <div class="project-card__content">
-    <h3 class="project-card__title">GatoHaus</h3>
-
-    <div class="project-card__badges">
-      <span class="tag tag--html">HTML</span>
-      <span class="tag tag--css">CSS</span>
-      <span class="tag tag--javascript">JS</span>
-      <span class="tag tag--node">Node.js</span>
-      <span class="tag tag--express">Express</span>
+  <section id="proyectos" class="projects">
+    <div class="container">
+      <h2 class="projects__title">Proyectos</h2>
+      <div class="carousel">
+        <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">&#10094;</button>
+  
+        <div class="carousel__track-container">
+          <ul class="carousel__track">
+  
+            <!-- Card OrdenadoresDeBuceo -->
+            <li class="carousel__slide">
+              <article class="project-card">
+                <img src="assets/images/ordenadoresDeBuceo-card.png" alt="Vista previa de OrdenadoresDeBuceo" class="project-card__image" />
+                <div class="project-card__content">
+                  <h3 class="project-card__title">OrdenadoresDeBuceo</h3>
+                  <div class="project-card__badges">
+                    <span class="tag tag--react">React</span>
+                    <span class="tag tag--typescript">TypeScript</span>
+                    <span class="tag tag--tailwind">Tailwind</span>
+                  </div>
+                  <p class="project-card__description">
+                    Proyecto en desarrollo para un cliente. Permite comparar ordenadores de buceo por características como seguridad, profundidad y tecnología.
+                  </p>
+                  <a href="#" class="btn btn--small project-card__btn" target="_blank" rel="noopener noreferrer">Ver Demo</a>
+                </div>
+              </article>
+            </li>
+            <!-- Card GatoHaus -->
+            <li class="carousel__slide">
+              <article class="project-card">
+                <img src="assets/images/gatohaus-card.png" alt="Vista previa de GatoHaus" class="project-card__image" />
+                <div class="project-card__content">
+                  <h3 class="project-card__title">GatoHaus</h3>
+                  <div class="project-card__badges">
+                    <span class="tag tag--html">HTML</span>
+                    <span class="tag tag--css">CSS</span>
+                    <span class="tag tag--javascript">JS</span>
+                    <span class="tag tag--node">Node.js</span>
+                  </div>
+                  <p class="project-card__description">
+                    Simulador de reservas para un hotel de gatos. Permite a los usuarios seleccionar fechas y habitaciones, y muestra un resumen de la reserva.
+                  </p>
+                  <a href="https://github.com/ReyesMorales/GatoHaus" class="btn btn--small project-card__btn" target="_blank" rel="noopener noreferrer">Ver repositorio</a>
+                </div>
+              </article>
+            </li>
+  
+  
+            <!-- Card HelpHub -->
+            <li class="carousel__slide">
+              <article class="project-card">
+                <img src="assets/images/helphub.png" alt="Vista previa de HelpHub" class="project-card__image" />
+                <div class="project-card__content">
+                  <h3 class="project-card__title">HelpHub</h3>
+                  <div class="project-card__badges">
+                    <span class="tag tag--vite">Vite</span>
+                    <span class="tag tag--react">React</span>
+                    <span class="tag tag--typescript">TypeScript</span>
+                    <span class="tag tag--tailwind">Tailwind</span>
+                  </div>
+                  <p class="project-card__description">
+                    Proyecto voluntario donde participé como desarrolladora frontend con la organización AdoptaUnJunior.
+                  </p>
+                  <a href="https://www.linkedin.com/posts/evangelina-segovia-ux-ui_y-al-fin-est%C3%A1-listo-despu%C3%A9s-de-7-ugcPost-7272883323952156673-zPwk?utm_source=share&utm_medium=member_desktop" class="btn btn--small project-card__btn" target="_blank" rel="noopener noreferrer">Ver en LinkedIn</a>
+                </div>
+              </article>
+            </li>
+  
+          </ul>
+        </div>
+  
+        <button class="carousel__btn carousel__btn--next" aria-label="Siguiente">&#10095;</button>
+      </div>
     </div>
-
-    <p class="project-card__description">
-      Simulador de reservas para un hotel de gatos. Incluye frontend con HTML, CSS y JavaScript, y backend con Node.js y Express.
-    </p>
-
-    <a
-      href="https://github.com/ReyesMorales/GatoHaus"
-      class="btn btn--small project-card__btn"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Ver repositorio
-    </a>
-  </div>
-</article>
-
-<!-- Card OrdenadoresDeBuceo -->
-<article class="project-card project-card--horizontal">
-  <img
-    src="assets/images/ordenadoresDeBuceo-card.png"
-    alt="Vista previa de OrdenadoresDeBuceo"
-    class="project-card__image"
-  />
-  <div class="project-card__content">
-    <h3 class="project-card__title">OrdenadoresDeBuceo</h3>
-
-    <div class="project-card__badges">
-      <span class="tag tag--react">React</span>
-      <span class="tag tag--typescript">TypeScript</span>
-      <span class="tag tag--tailwind">Tailwind</span>
-    </div>
-
-    <p class="project-card__description">
-      Proyecto en desarrollo para un cliente. Permite comparar ordenadores de buceo por características como seguridad, profundidad y tecnología. Repositorio privado.
-    </p>
-  </div>
-</article>
-
-<!-- Card HelpHub -->
-<article class="project-card project-card--horizontal">
-  <img
-    src="assets/images/helphub.png"
-    alt="Vista previa de HelpHub"
-    class="project-card__image"
-  />
-  <div class="project-card__content">
-    <h3 class="project-card__title">HelpHub</h3>
-
-    <div class="project-card__badges">
-      <span class="tag tag--vite">Vite</span>
-      <span class="tag tag--react">React</span>
-      <span class="tag tag--typescript">TypeScript</span>
-      <span class="tag tag--tailwind">Tailwind</span>
-    </div>
-
-    <p class="project-card__description">
-      Proyecto voluntario donde participé como desarrolladora frontend.
-    </p>
-
-    <a
-      href="https://www.linkedin.com/posts/evangelina-segovia-ux-ui_y-al-fin-est%C3%A1-listo-despu%C3%A9s-de-7-ugcPost-7272883323952156673-zPwk?utm_source=share&utm_medium=member_desktop"
-      class="btn btn--small project-card__btn"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Ver en LinkedIn
-    </a>
-  </div>
-</article>
-
-    </div>
-  </div>
-</section>
- 
+  </section>
+   
   <!-- Skills -->
   <section id="skills" class="skills">
     <div class="container">
@@ -241,5 +221,7 @@
   <!-- Scripts -->
   <script src="main.js"></script>
   <script src="assets/images/js/hero.js"></script>
+  <script src="assets/images/js/carousel.js"></script>
+
 </body>
 </html>
