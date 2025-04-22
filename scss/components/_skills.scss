@@ -60,3 +60,40 @@
   font-size: 1rem;
   vertical-align: middle;
 }
+
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  position: relative;
+
+  .skills__group {
+    flex-basis: 100%;
+    position: relative;
+    margin-top: 2rem;
+
+    &::before {
+      font-weight: 600;
+      font-size: 1.5rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    &--lang::before {
+      content: 'Lenguajes';
+    }
+
+    &--fw::before {
+      content: 'Frameworks y Librerías';
+    }
+
+    &--tools::before {
+      content: 'Herramientas';
+    }
+
+    &--design::before {
+      content: 'Diseño y colaboración';
+    }
+  }
+}
+
