@@ -1,8 +1,10 @@
 # node modules
 node_modules/
 
-# CSS compilado
-css/*.css
+# Sass source files (no necesarios en producción)
+scss/**/*.scss
+
+# Sourcemaps opcionales
 css/*.css.map
 
 # Archivos temporales
@@ -11,3 +13,7 @@ css/*.css.map
 
 # VSCode
 .vscode/
+
+# CSS legacy (temporal)
+legacy.css
+
