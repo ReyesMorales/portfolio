@@ -3,6 +3,7 @@
 .nav {
   display: flex;
   align-items: center;
+  position: relative;
 
   .nav__list {
     display: flex;
@@ -24,48 +25,85 @@
   }
 }
 
-.nav__list a {
-  display: inline-block;
-  font-weight: 500;
-  transition: transform 0.3s cubic-bezier(0.25, 1.5, 0.5, 1), color 0.3s;
-
-  &:hover {
-    transform: scale(1.2);
-    color: colors.$color-primary;
-  }
-}
-
-
-.nav__toggle {
+.nav__toggle,
+.nav__close {
   display: none;
   background: none;
   border: none;
-  font-size: 2rem;
+  font-size: 1.6rem;
   cursor: pointer;
+  color: colors.$color-text;
+  z-index: 1001;
 }
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .nav {
-    flex-direction: column;
-    align-items: flex-end;
-
-    .nav__list {
-      display: none;
-      flex-direction: column;
-      background: #fff;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-
-      &.active {
-        display: flex;
-      }
-    }
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
   }
 
   .nav__toggle {
     display: block;
+    position: absolute;
+    top: 1.25rem;
+    right: 1rem;
+    z-index: 1001;
+  }
+
+  .nav__close {
+    display: block;
+    position: absolute;
+    top: 1.25rem;
+    right: 1rem;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    color: colors.$color-text;
+    cursor: pointer;
+    z-index: 1002;
+  }
+
+  .nav__list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    flex-direction: column;
+    background-color: colors.$color-footer-bg;
+    width: 75%;
+    height: 100vh;
+    padding: 4rem 2rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+
+    a {
+      font-size: 1.1rem;
+      text-align: left;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      color: colors.$color-text;
+      background-color: transparent;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    
+      &:hover {
+        background-color: colors.$color-primary;
+        color: colors.$color-footer-bg;
+      }
+    }    
+
+    &.active {
+      right: 0;
+    }
+  }
+}*/
+
+@media (max-width: 768px) {
+  .nav__toggle,
+  .nav__close,
+  .nav__list {
+    display: none !important;
   }
 }
+
