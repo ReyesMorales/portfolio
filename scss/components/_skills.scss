@@ -1,4 +1,3 @@
-// src/scss/components/_skills.scss
 @use '../settings/colors';
 @use '../utilities/spacings';
 
@@ -95,5 +94,52 @@
       content: 'Diseño y colaboración';
     }
   }
+
+  @media (max-width: 768px) {
+    .skills__title {
+      margin-bottom: 0.5rem;
+    }
+
+    .skills__group--lang {
+      margin-top: 0!important;
+    }
+    
+    .skills__group {
+      margin-top: 1.5rem; 
+    }
+  
+    .skills__group::before {
+      font-size: 1.25rem; 
+    }
+
+    .skills__list {
+      justify-content: space-between;
+    }
+
+    .tag {
+      padding: 0.4rem 0.75rem;
+      font-size: 0.8125rem; 
+      flex: 0 1 calc(50% - 0.5rem);
+      text-align: center;
+    }
+    .tag i {
+      margin-right: 0.25rem;
+      font-size: 0.95rem;
+      vertical-align: middle;
+    }
+    .tag--javascript,
+    .tag--typescript {
+      font-size: 0; 
+      position: relative;
+    }
+
+    .tag--javascript::after,
+    .tag--typescript::after {
+      content: attr(data-short);
+      font-size: 0.875rem; 
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+  }  
 }
 
