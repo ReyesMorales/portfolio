@@ -2,7 +2,7 @@
 @use '../utilities/spacings';
 
 .hero {
-  @include spacings.section-spacing(1rem); 
+  @include spacings.section-spacing(1rem);
   background-color: colors.$color-background;
   text-align: center;
   font-family: 'Fira Code', monospace;
@@ -10,11 +10,14 @@
   .hero__line {
     font-size: 2rem;
     color: colors.$color-text;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: inline;
     gap: 0.5rem;
     white-space: nowrap;
+    margin: 0;
+  }
+
+  .hero__line--indent {
+    display: inline;
   }
 
   .hero__prompt {
@@ -36,6 +39,41 @@
   @keyframes blink {
     to {
       visibility: hidden;
+    }
+  }
+
+  // 📱 Media query
+  @media (max-width: 768px) {
+    .hero__line {
+      display: flex;
+      justify-content: center;
+      gap: 0.25rem;
+      font-size: 1.6rem;
+      line-height: 1.4;
+      flex-wrap: wrap;
+      white-space: normal;
+    }
+
+    .hero__line--indent {
+      padding-left: 1.5ch;
+      display: block;
+    }
+
+    .hero__block {
+      display: block;
+      max-width: 90%;
+      margin: 0 auto;
+      word-break: break-word;
+    }
+
+    .hero__text {
+      display: block;
+      white-space: normal;
+    }
+
+    .hero__cursor {
+      display: inline-block;
+      transform: translateY(-0.1rem);
     }
   }
 }
