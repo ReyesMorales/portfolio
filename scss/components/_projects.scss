@@ -19,7 +19,7 @@
 
   &__track-container {
     overflow: hidden;
-    padding-inline: 3rem; // espacio para las flechas fuera
+    padding-inline: 3rem; 
   }
 
   &__track {
@@ -129,3 +129,90 @@
     align-self: flex-start;
   }
 }
+
+@media (max-width: 768px) {
+  .carousel {
+    &__track-container {
+      padding-inline: 0;
+    }
+
+    &__track {
+      flex-direction: column;
+    }
+
+    &__slide {
+      display: block;
+      opacity: 1;
+      transform: none;
+      margin-bottom: 2rem;
+
+      &.is-visible {
+        display: block;
+      }
+    }
+
+    &__btn {
+      display: none;
+    }
+  }
+
+  .project-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__image,
+    &__content {
+      width: 100%;
+    }
+
+    &__content {
+      padding: 1rem 0;
+    }
+
+    &__title,
+    &__description {
+      text-align: center;
+    }
+
+    &__btn {
+      align-self: center;
+    }
+
+    &__title {
+      font-size: 1.2rem; 
+      margin-bottom: 0.5rem;
+    }
+
+    &__badges {
+      justify-content: center;
+      gap: 0.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    &__description {
+      font-size: 0.875rem; 
+      line-height: 1.4;
+    }
+
+    .tag {
+      padding: 0.3rem 0.7rem;
+      font-size: 0.75rem;
+    }
+
+    .project-card__badges {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      row-gap: 0.4rem;
+    }
+  
+    .project-card__badges .tag {
+      min-width: 80px; 
+      text-align: center;
+    }
+  }
+}
+
+
+
