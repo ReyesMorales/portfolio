@@ -15,7 +15,7 @@
     <div class="container">
       <h1 class="logo">Reyes Morales</h1>
       <nav class="nav">
-        <ul class="nav__list active">
+        <ul class="nav__list">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#sobre-mi">Sobre mí</a></li>
           <li><a href="#proyectos">Proyectos</a></li>
@@ -23,7 +23,8 @@
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
-      <button id="menuToggle" class="nav__toggle">☰</button>
+      <!--<button id="menuToggle" class="nav__toggle">☰</button>
+      <button id="menuClose" class="nav__close" aria-label="Cerrar menú">✖</button>-->
     </div>
   </header>
 
@@ -32,9 +33,12 @@
     <div class="container">
       <p class="hero__line">
         <span class="hero__prompt">&gt;</span>
-        <span class="hero__text">Hola mundo, soy Reyes</span>
-        <span class="hero__cursor">_</span>
+        <span class="hero__text">Hola mundo,</span>
       </p>
+      <p class="hero__line hero__line--indent">
+        <span class="hero__text">soy Reyes<span class="hero__cursor">_</span></span>
+      </p>
+           
       <p class="hero__subtext" id="hero-subtext">Desarrolladora web Full Stack</p>
     </div>
   </section>  
