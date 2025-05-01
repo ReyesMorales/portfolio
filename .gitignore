@@ -1,9 +1,6 @@
 # node modules
 node_modules/
 
-# Sass source files (no necesarios en producción)
-scss/**/*.scss
-
 # Sourcemaps opcionales
 css/*.css.map
 
