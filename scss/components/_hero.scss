@@ -2,7 +2,7 @@
 @use '../utilities/spacings';
 
 .hero {
-  @include spacings.section-spacing(1rem);
+  @include spacings.section-spacing-desktop(); 
   background-color: colors.$color-background;
   text-align: center;
   font-family: 'Fira Code', monospace;
@@ -13,7 +13,6 @@
     display: inline;
     gap: 0.5rem;
     white-space: nowrap;
-    margin: 0;
   }
 
   .hero__line--indent {

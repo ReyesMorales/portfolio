@@ -1,5 +1,22 @@
-// Mixin reutilizable para espaciado de secciones
-@mixin section-spacing($padding: 1rem) {
-    padding-block: $padding;
+$section-spacing-desktop: 2rem;
+$section-spacing-mobile: 1rem;
+
+@mixin section-spacing-desktop($padding: $section-spacing-desktop) {
+  padding-block: $padding;
+}
+
+@mixin section-spacing-mobile($padding: $section-spacing-mobile) {
+  padding-block: $padding;
+}
+
+@mixin section-title {
+    margin-bottom: 1rem;
+    font-size: 2rem;
   }
+
+@mixin section-title-mobile {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem; 
+  }
+  
   

@@ -2,14 +2,13 @@
 @use '../utilities/spacings';
 
 .about {
-  @include spacings.section-spacing();
+  @include spacings.section-spacing-desktop();
   background-color: colors.$color-background;
 
   .about__title {
+    @include spacings.section-title;
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: colors.$color-text;
+    color: colors.$color-heading;
   }
 
   .about__wrapper {
@@ -17,11 +16,12 @@
     align-items: center;
     gap: 2rem;
     flex-wrap: wrap;
+    margin-top: 2rem;
   }
 
   .about__text {
     flex: 1;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.8;
     color: colors.$color-text;
 
@@ -43,7 +43,7 @@
     text-align: center;
   
     img {
-      width: 100%;
+      width: 90%;
       max-width: 390px;
       height: auto;
       border-radius: 1rem;
@@ -58,8 +58,9 @@
   
   // 📱 Media queries
   @media (max-width: 768px) {
+    @include spacings.section-spacing-mobile();
     .about {
-      padding-block: 1.5rem;
+      @include spacings.section-title-mobile;
     }
     
     .about__wrapper {
@@ -69,7 +70,7 @@
     }
   
     .about__title {
-      margin-bottom: 1rem;
+      @include spacings.section-title-mobile;
     }
 
     .about__text {

@@ -2,14 +2,14 @@
 @use '../utilities/spacings';
 
 .contact {
-  @include spacings.section-spacing();
+  @include spacings.section-spacing-desktop();
   background-color: colors.$color-background;
   color: colors.$color-text;
   text-align: center;
 
   .contact__title {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    @include spacings.section-title;
+    color: colors.$color-heading;
   }
 
   .contact__info {
@@ -47,9 +47,11 @@
     font-size: 0.9rem;
   }
 
+  // 📱 Media queries
   @media (max-width: 768px) {
+    @include spacings.section-spacing-mobile();
     .contact__title {
-      margin-bottom: 1rem;
+      @include spacings.section-title-mobile;
     }
   
     .contact__info {

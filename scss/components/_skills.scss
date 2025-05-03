@@ -2,21 +2,52 @@
 @use '../utilities/spacings';
 
 .skills {
-  @include spacings.section-spacing();
+  @include spacings.section-spacing-desktop();
   text-align: center;
 
   &__title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    @include spacings.section-title;
+    color: colors.$color-heading;
   }
 
   &__list {
+    margin-top: -2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
     list-style: none;
     padding: 0;
+    position: relative;
+
+    .skills__group {
+      flex-basis: 100%;
+      position: relative;
+      margin-top: 2rem;
+
+      &::before {
+        font-weight: 600;
+        font-size: 1.5rem;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      &--lang::before {
+        content: 'Lenguajes';
+      }
+
+      &--fw::before {
+        content: 'Frameworks y Librerías';
+      }
+
+      &--tools::before {
+        content: 'Herramientas';
+      }
+
+      &--design::before {
+        content: 'Diseño y colaboración';
+      }
+    }
   }
 }
 
@@ -29,117 +60,80 @@
   color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   user-select: none;
+
+  &--html      { background-color: #e34c26; }
+  &--css       { background-color: #264de4; }
+  &--sass      { background-color: #cd6799; }
+  &--tailwind  { background-color: #38bdf8; }
+  &--bootstrap { background-color: #7952b3; }
+  &--javascript{ background-color: #f7df1e; color: #000; }
+  &--typescript{ background-color: #3178c6; }
+  &--react     { background-color: #61dafb; color: #000; }
+  &--npm       { background-color: #cb0000; }
+  &--node      { background-color: #3c873a; }
+  &--express   { background-color: #444; }
+  &--vite      { background-color: #646cff; }
+  &--sql       { background-color: #00758f; }
+  &--mongodb   { background-color: #47a248; }
+  &--mysql     { background-color: #005e86; }
+  &--figma     { background-color: #a259ff; }
+  &--postman   { background-color: #ff6c37; }
+  &--discord   { background-color: #5865f2; }
+  &--trello    { background-color: #0079bf; }
+  &--git       { background-color: #f1502f; }
+  &--github    { background-color: #181717; }
+
+  i {
+    margin-right: 0.5rem;
+    font-size: 1rem;
+    vertical-align: middle;
+  }
 }
 
-// 🎨 Colores por tecnología
-.tag--html      { background-color: #e34c26; } // naranja HTML
-.tag--css       { background-color: #264de4; } // azul CSS
-.tag--sass      { background-color: #cd6799; } // rosa SASS
-.tag--tailwind  { background-color: #38bdf8; } // azul Tailwind
-.tag--bootstrap { background-color: #7952b3; } // morado Bootstrap
-.tag--javascript{ background-color: #f7df1e; color: #000; } // JS amarillo con texto oscuro
-.tag--typescript{ background-color: #3178c6; } // azul TypeScript
-.tag--react     { background-color: #61dafb; color: #000; } // azul claro React
-.tag--npm       { background-color: #cb0000; } // rojo NPM
-.tag--node      { background-color: #3c873a; } // verde Node.js
-.tag--express   { background-color: #444; } // gris oscuro Express
-.tag--vite      { background-color: #646cff; } // azul Vite
-.tag--sql       { background-color: #00758f; } // azul SQL
-.tag--mongodb   { background-color: #47a248; } // verde MongoDB
-.tag--mysql     { background-color: #005e86; } // azul MySQL
-.tag--figma     { background-color: #a259ff; } // morado Figma
-.tag--postman   { background-color: #ff6c37; } // naranja Postman
-.tag--discord   { background-color: #5865f2; } // azul Discord
-.tag--trello    { background-color: #0079bf; } // azul Trello
-.tag--git       { background-color: #f1502f; } // naranja Git
-.tag--github    { background-color: #181717; } // negro GitHub
-
-.tag i {
-  margin-right: 0.5rem;
-  font-size: 1rem;
-  vertical-align: middle;
-}
-
-.skills__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  position: relative;
-
-  .skills__group {
-    flex-basis: 100%;
-    position: relative;
-    margin-top: 2rem;
-
-    &::before {
-      font-weight: 600;
-      font-size: 1.5rem;
-      display: block;
-      margin-bottom: 0.5rem;
+@media (max-width: 768px) {
+  .skills {
+    @include spacings.section-spacing-mobile();
+    &__title {
+      @include spacings.section-title-mobile;
     }
 
-    &--lang::before {
-      content: 'Lenguajes';
-    }
+    &__list {
+      margin-top: -1rem;
+      justify-content: space-between;
 
-    &--fw::before {
-      content: 'Frameworks y Librerías';
-    }
+      .skills__group {
+        margin-top: 1.5rem;
 
-    &--tools::before {
-      content: 'Herramientas';
-    }
-
-    &--design::before {
-      content: 'Diseño y colaboración';
+        &::before {
+          font-size: 1.25rem;
+        }
+      }
     }
   }
 
-  @media (max-width: 768px) {
-    .skills__title {
-      margin-bottom: 0.5rem;
-    }
+  .tag {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8125rem;
+    flex: 0 1 calc(50% - 0.5rem);
+    text-align: center;
 
-    .skills__group--lang {
-      margin-top: 0!important;
-    }
-    
-    .skills__group {
-      margin-top: 1.5rem; 
-    }
-  
-    .skills__group::before {
-      font-size: 1.25rem; 
-    }
-
-    .skills__list {
-      justify-content: space-between;
-    }
-
-    .tag {
-      padding: 0.4rem 0.75rem;
-      font-size: 0.8125rem; 
-      flex: 0 1 calc(50% - 0.5rem);
-      text-align: center;
-    }
-    .tag i {
+    i {
       margin-right: 0.25rem;
       font-size: 0.95rem;
       vertical-align: middle;
     }
-    .tag--javascript,
-    .tag--typescript {
-      font-size: 0; 
+
+    &--javascript,
+    &--typescript {
+      font-size: 0;
       position: relative;
-    }
 
-    .tag--javascript::after,
-    .tag--typescript::after {
-      content: attr(data-short);
-      font-size: 0.875rem; 
-      margin-left: 0.5rem;
-      vertical-align: middle;
+      &::after {
+        content: attr(data-short);
+        font-size: 0.875rem;
+        margin-left: 0.5rem;
+        vertical-align: middle;
+      }
     }
-  }  
+  }
 }
-

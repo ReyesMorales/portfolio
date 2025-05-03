@@ -2,12 +2,12 @@
 @use '../utilities/spacings';
 
 .projects {
-  @include spacings.section-spacing();
+  @include spacings.section-spacing-desktop();
   text-align: center;
 
   &__title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    @include spacings.section-title;
+    color: colors.$color-heading;
   }
 }
 
@@ -130,7 +130,15 @@
   }
 }
 
+// 📱 Media queries
 @media (max-width: 768px) {
+  .projects {
+    @include spacings.section-spacing-mobile;
+    .projects__title {
+      @include spacings.section-title-mobile;
+    }
+  }
+
   .carousel {
     &__track-container {
       padding-inline: 0;
